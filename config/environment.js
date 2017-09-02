@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-test',
+    modulePrefix: 'ember-ghibliapi-browser',
     environment,
     rootURL: '/',
     locationType: 'auto',

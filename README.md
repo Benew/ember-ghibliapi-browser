@@ -1,7 +1,6 @@
-# ember-test
+# ember-ghibliapi-browser
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple ember app that shows contents from the [ghibliapi hosted on heroku](https://ghibliapi.herokuapp.com).
 
 ## Prerequisites
 

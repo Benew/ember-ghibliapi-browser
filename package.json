@@ -1,7 +1,7 @@
 {
-  "name": "ember-test",
-  "version": "0.0.0",
-  "description": "Small description for ember-test goes here",
+  "name": "ember-ghibliapi-browser",
+  "version": "0.0.1",
+  "description": "A simple ember app that shows contents from the ghibliapi hosted on heroku",
   "license": "MIT",
   "author": "",
   "directories": {
