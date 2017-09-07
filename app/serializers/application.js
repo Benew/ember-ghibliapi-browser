@@ -1,13 +1,13 @@
 import DS from 'ember-data';
 
 export default DS.JSONSerializer.extend({
-  normalizeFindAllResponse(store, type, payload) {
+  normalizeFindAllResponse(/*store, type, payload*/) {
     let returnValue = this._super(...arguments);
     returnValue.data.map(this.cleanupRelationships.bind(this));
     return returnValue;
   },
 
-  normalizeFindRecordResponse(store, type, payload) {
+  normalizeFindRecordResponse(/*store, type, payload*/) {
     let returnValue = this._super(...arguments);
     this.cleanupRelationships(returnValue.data);
     return returnValue;
