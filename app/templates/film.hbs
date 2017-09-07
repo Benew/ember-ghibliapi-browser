@@ -1,0 +1,12 @@
+<h2>{{model.title}} ({{model.release_date}})</h2>
+<h4>Director: {{model.director}}</h4>
+<h3>Synopsis</h3>
+<p>{{model.description}})</p>
+<h3>People</h3>
+{{#each model.people as |person|}}
+  <h3>
+    <a href="person/{{person.id}}">
+      {{person.name}}
+    </a>
+  </h3>
+{{/each}}
