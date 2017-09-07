@@ -1,10 +1,26 @@
 <h2>{{model.name}}</h2>
-
-<h3>Films:</h3>
-{{#each model.films as |film|}}
-  <h3>
-    <a href="film/{{film.id}}">
-      {{film.title}} ({{film.release_date}})
-    </a>
-  </h3>
-{{/each}}
+<h3>Characteristics</h3>
+<ul>
+  <li>
+    <label>Gender :</label> {{model.gender}}
+  </li>
+  <li>
+    <label>Age :</label> {{model.age}}
+  </li>
+  <li>
+    <label>Eye color :</label> {{model.eye_color}}
+  </li>
+  <li>
+    <label>Hair color :</label> {{model.hair_color}}
+  </li>
+</ul>
+{{#if model.films}}
+  <h3>Films:</h3>
+  {{#each model.films as |film|}}
+    <h3>
+      <a href="film/{{film.id}}">
+        {{film.title}} ({{film.release_date}})
+      </a>
+    </h3>
+  {{/each}}
+{{/if}}
