@@ -11,4 +11,10 @@
       </a>
     </h3>
   {{/each}}
+{{else}}
+  <p>
+    <b><i>No characters that we know appear in this film...</i></b><br />
+    <a href="https://github.com/janaipakos/ghibliapi/issues/new?title=More+%22{{model.title}}%22+characters&body=" target="_blank">I know better ! <small>(submit an issue on github)</small></a><br />
+    Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
+  </p>
 {{/if}}
