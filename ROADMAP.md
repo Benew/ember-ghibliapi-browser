@@ -1,8 +1,14 @@
 # Roadmap
 
 - [x] See the list of all the Ghibli movies
-- [ ] Display the details of a specific movie, including the list of people, locations and vehicles, with links to their respective details page
-- [ ] Display the details of a character/location/vehicle, including the list of movie(s) they appear in, with links to their respective details page
+- [x] Display the details of a specific movie, including
+- [x] the list of people,
+- [ ] locations
+- [ ] and vehicles, with links to their respective details page
+- [x] Display the details of a character,
+- [ ] location,
+- [ ] vehicle,
+- [x] including the list of movie(s) they appear in, with links to their respective details page
 
 ## Bonus
 
