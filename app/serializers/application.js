@@ -31,7 +31,7 @@ export default DS.JSONSerializer.extend({
    */
   cleanupRelationshipData(relationshipData, index, array){
     relationshipData.id = relationshipData.id.substring(relationshipData.id.lastIndexOf('/') + 1);
-    if(!relationshipData.id){
+    if(!relationshipData.id || relationshipData.id === 'TODO'){
       array.splice(index, 1);
     }
   },
