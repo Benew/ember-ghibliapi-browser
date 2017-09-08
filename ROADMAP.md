@@ -4,7 +4,7 @@
 - [x] Display the details of a specific movie, including
 - [x] the list of people,
 - [x] locations
-- [ ] and vehicles, with links to their respective details page
+- [x] and vehicles, with links to their respective details page
 - [x] Display the details of a character,
 - [ ] location,
 - [ ] vehicle,
