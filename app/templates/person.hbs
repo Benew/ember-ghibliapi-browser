@@ -1,22 +1,22 @@
-<h2>{{model.name}}</h2>
+<h2>{{model.person.name}}</h2>
 <h3>Characteristics</h3>
 <ul>
   <li>
-    <label>Gender :</label> {{model.gender}}
+    <label>Gender :</label> {{model.person.gender}}
   </li>
   <li>
-    <label>Age :</label> {{model.age}}
+    <label>Age :</label> {{model.person.age}}
   </li>
   <li>
-    <label>Eye color :</label> {{model.eye_color}}
+    <label>Eye color :</label> {{model.person.eye_color}}
   </li>
   <li>
-    <label>Hair color :</label> {{model.hair_color}}
+    <label>Hair color :</label> {{model.person.hair_color}}
   </li>
 </ul>
-{{#if model.films}}
+{{#if model.person.films}}
   <h3>Films:</h3>
-  {{#each model.films as |film|}}
+  {{#each model.person.films as |film|}}
     <h3>
       <a href="/film/{{film.id}}">
         {{film.title}} ({{film.release_date}})

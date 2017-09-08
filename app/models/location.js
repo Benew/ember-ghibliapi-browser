@@ -6,5 +6,10 @@ export default DS.Model.extend({
   terrain: DS.attr('string'),
   surfaceWater: DS.attr('string'),
   residents: DS.hasMany('person'),
-  films: DS.hasMany('film')
+  films: DS.hasMany('film', {
+    async: true
+  }),
+  residents: DS.hasMany('person', {
+    async: true
+  })
 });
