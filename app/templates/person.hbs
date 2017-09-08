@@ -24,3 +24,13 @@
     </h3>
   {{/each}}
 {{/if}}
+{{#if model.locations}}
+  <h3>Locations</h3>
+  {{#each model.locations as |location|}}
+    <h3>
+      <a href="/location/{{location.id}}">
+        {{location.name}}
+      </a>
+    </h3>
+  {{/each}}
+{{/if}}
