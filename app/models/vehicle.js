@@ -6,5 +6,5 @@ export default DS.Model.extend({
   vehicleClass: DS.attr('string'),
   length: DS.attr('string'),
   pilot: DS.belongsTo('person'),
-  films: DS.hasMany('film')
+  films: DS.belongsTo('film')
 });
