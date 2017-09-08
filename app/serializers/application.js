@@ -38,9 +38,13 @@ export default DS.JSONSerializer.extend({
   cleanupRelationships(data){
     Object.keys(data.relationships)
     .forEach((relationshipName) => {
-      data.relationships[relationshipName].data.forEach(this.cleanupRelationshipData.bind(this));
-      if(!data.relationships[relationshipName].data.length){
-        delete data.relationships[relationshipName];
+      if(Ember.isArray(data.relationships[relationshipName].data)){
+        data.relationships[relationshipName].data.forEach(this.cleanupRelationshipData.bind(this));
+        if(!data.relationships[relationshipName].data.length){
+          delete data.relationships[relationshipName];
+        }
+      } else {
+        this.cleanupRelationshipData(data.relationships[relationshipName].data);
       }
     });
   }
