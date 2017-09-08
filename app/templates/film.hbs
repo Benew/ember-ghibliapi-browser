@@ -29,3 +29,14 @@
     Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
   </p>
 {{/if}}
+
+{{#if model.vehicles}}
+  <h3>Vehicles</h3>
+  {{#each model.vehicles as |vehicle|}}
+    <h3>
+      <a href="/vehicle/{{vehicle.id}}">
+        {{vehicle.name}}
+      </a>
+    </h3>
+  {{/each}}
+{{/if}}

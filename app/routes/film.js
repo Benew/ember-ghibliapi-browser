@@ -11,9 +11,16 @@ export default Ember.Route.extend({
         )
       )
     );
+    let vehicles = this.store.findAll('vehicle')
+    .then(results =>
+      results.filter(vehicle =>
+        vehicle.get('films').get('id') === params.film_id
+      )
+    );
     return Ember.RSVP.hash({
       film: this.store.findRecord('film', params.film_id),
-      locations
+      locations,
+      vehicles
     });
   }
 });
