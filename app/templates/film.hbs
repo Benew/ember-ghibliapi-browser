@@ -1,46 +1,57 @@
 {{#page-header}}
-  <h2>
-    {{model.film.title}} ({{model.film.release_date}})
-  </h2>
+  <div class="flex layout-column layout-align-center-center layout-gt-xs-row">
+    <h2>
+      {{model.film.title}} ({{model.film.release_date}})
+    </h2>
+    <span class="flex"></span>
+    <small>Director: {{model.film.director}}</small>
+  </div>
 {{/page-header}}
-<h4>Director: {{model.film.director}}</h4>
-<h3>Synopsis</h3>
-<p>{{model.film.description}})</p>
-{{#if model.locations}}
-  <h3>Locations</h3>
-  {{#each model.locations as |location|}}
-    <h3>
-      <a href="/location/{{location.id}}">
-        {{location.name}}
-      </a>
-    </h3>
-  {{/each}}
-{{/if}}
+<md-content class="flex md-padding">
+  <h3>Synopsis</h3>
+  <p>{{model.film.description}})</p>
+  {{#if model.locations}}
+    <h3>Locations</h3>
+    {{#paper-list}}
+      {{#each model.locations as |location|}}
+        {{#paper-item href=(href-to "location" location.id)}}
+          <p>
+            {{location.name}}
+          </p>
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+  {{/if}}
 
-{{#if model.film.people}}
-  <h3>People</h3>
-  {{#each model.film.people as |person|}}
-    <h3>
-      <a href="/person/{{person.id}}">
-        {{person.name}}
-      </a>
-    </h3>
-  {{/each}}
-{{else}}
-  <p>
-    <b><i>No characters that we know appear in this film...</i></b><br />
-    <a href="https://github.com/janaipakos/ghibliapi/issues/new?title=More+%22{{model.film.title}}%22+characters&body=" target="_blank">I know better ! <small>(submit an issue on github)</small></a><br />
-    Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
-  </p>
-{{/if}}
+  {{#if model.film.people}}
+    <h3>People</h3>
+    {{#paper-list}}
+      {{#each model.film.people as |person|}}
+        {{#paper-item href=(href-to "person" person.id)}}
+          <p>
+            {{person.name}}
+          </p>
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+  {{else}}
+    <p>
+      <b><i>No characters that we know appear in this film...</i></b><br />
+      <a href="https://github.com/janaipakos/ghibliapi/issues/new?title=More+%22{{model.film.title}}%22+characters&body=" target="_blank">I know better ! <small>(submit an issue on github)</small></a><br />
+      Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
+    </p>
+  {{/if}}
 
-{{#if model.vehicles}}
-  <h3>Vehicles</h3>
-  {{#each model.vehicles as |vehicle|}}
-    <h3>
-      <a href="/vehicle/{{vehicle.id}}">
-        {{vehicle.name}}
-      </a>
-    </h3>
-  {{/each}}
-{{/if}}
+  {{#if model.vehicles}}
+    <h3>Vehicles</h3>
+    {{#paper-list}}
+      {{#each model.vehicles as |vehicle|}}
+        {{#paper-item href=(href-to "vehicle" vehicle.id)}}
+          <p>
+            {{vehicle.name}}
+          </p>
+        {{/paper-item}}
+      {{/each}}
+    {{/paper-list}}
+  {{/if}}
+</md-content>
