@@ -1,3 +1,7 @@
+// Define desired color palettes.
+$primary: "deep-orange";
+$accent: "blue-grey";
+$warn: "pink";
 @import 'ember-paper';
 
 body > .ember-view{
