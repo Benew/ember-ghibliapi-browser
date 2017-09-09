@@ -6,7 +6,7 @@
 - [x] locations
 - [x] and vehicles, with links to their respective details page
 - [x] Display the details of a character,
-- [ ] location,
+- [x] location,
 - [ ] vehicle,
 - [x] including the list of movie(s) they appear in, with links to their respective details page
 
