@@ -10,11 +10,11 @@ body > .ember-view{
 #header, #footer {
   @extend md-toolbar;
 }
-#footer .md-toolbar-tools{
-  color: contrastColor($accent, '900');
-  background-color: color($accent, '900');
-}
 .md-accent.md-hue-2{
   color: contrastColor($accent, '800');
   background-color: color($accent, '800');
+}
+.md-accent.md-hue-3{
+  color: contrastColor($accent, '900');
+  background-color: color($accent, '900');
 }
