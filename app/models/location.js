@@ -5,7 +5,6 @@ export default DS.Model.extend({
   climate: DS.attr('string'),
   terrain: DS.attr('string'),
   surfaceWater: DS.attr('string'),
-  residents: DS.hasMany('person'),
   films: DS.hasMany('film', {
     async: true
   }),
