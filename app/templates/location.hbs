@@ -1,1 +1,33 @@
-{{outlet}}
+<h2>{{model.name}}</h2>
+<h3>Characteristics</h3>
+<ul>
+  <li>
+    <label>Climate :</label> {{model.climate}}
+  </li>
+  <li>
+    <label>Terrain :</label> {{model.terrain}}
+  </li>
+  <li>
+    <label>Surface water :</label> {{model.surfaceWater}}
+  </li>
+</ul>
+{{#if model.films}}
+  <h3>Films:</h3>
+  {{#each model.films as |film|}}
+    <h3>
+      <a href="/film/{{film.id}}">
+        {{film.title}} ({{film.release_date}})
+      </a>
+    </h3>
+  {{/each}}
+{{/if}}
+{{#if model.residents}}
+  <h3>Residents</h3>
+  {{#each model.residents as |person|}}
+    <h3>
+      <a href="/person/{{person.id}}">
+        {{person.name}}
+      </a>
+    </h3>
+  {{/each}}
+{{/if}}
