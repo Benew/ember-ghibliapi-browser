@@ -1,1 +1,28 @@
-{{outlet}}
+<h2>{{model.name}}</h2>
+<h3>Description</h3>
+<p>{{model.description}})</p>
+<h3>Characteristics</h3>
+<ul>
+  <li>
+    <label>Class :</label> {{model.vehicleClass}}
+  </li>
+  <li>
+    <label>Length :</label> {{model.length}} ft
+  </li>
+</ul>
+{{#if model.pilot}}
+  <h3>Pilot:</h3>
+  <h3>
+    <a href="/person/{{model.pilot.id}}">
+      {{model.pilot.name}}
+    </a>
+  </h3>
+{{/if}}
+{{#if model.films}}
+  <h3>Film:</h3>
+  <h3>
+    <a href="/film/{{model.films.id}}">
+      {{model.films.title}} ({{model.films.release_date}})
+    </a>
+  </h3>
+{{/if}}
