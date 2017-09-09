@@ -1,3 +1,19 @@
-<h1>Check out Ghilbi Studio Films from <a href="https://ghibliapi.herokuapp.com">ghibliapi.herokuapp.com</a></h1>
-
-{{outlet}}
+<header id="header">
+  <div class="md-toolbar-tools">
+    <h2>Check out Ghilbi Studio Films</h2>
+  </div>
+</header>
+<md-content id="main" class="md-padding flex">
+  {{outlet}}
+</md-content>
+<footer id="footer" class="md-accent">
+  <div class="md-toolbar-tools">
+    <small>
+      Data shown here come from <a href="https://ghibliapi.herokuapp.com">ghibliapi.herokuapp.com</a>
+    </small>
+    <small class="flex"></small>
+    <small>
+      {{#paper-button href="https://github.com/janaipakos/ghibliapi" target="_blank"}}{{paper-icon "public"}} Contribute{{/paper-button}}
+    </small>
+  </div>
+</footer>

@@ -1,1 +1,8 @@
 @import 'ember-paper';
+
+body > .ember-view{
+  @extend .flex, .layout-column;
+}
+#header, #footer {
+  @extend md-toolbar;
+}
