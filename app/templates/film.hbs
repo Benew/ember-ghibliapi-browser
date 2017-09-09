@@ -45,13 +45,6 @@
           </p>
         {{/paper-item}}
       {{/each}}
-
-    {{else}}
-      <p>
-        <b><i>No characters that we know appear in this film...</i></b><br />
-        <a href="https://github.com/janaipakos/ghibliapi/issues/new?title=More+%22{{model.film.title}}%22+characters&body=" target="_blank">I know better ! <small>(submit an issue on github)</small></a><br />
-        Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
-      </p>
     {{/if}}
 
     {{#if model.vehicles}}
@@ -70,5 +63,9 @@
       {{/each}}
 
     {{/if}}
+    {{paper-divider}}
+    {{#paper-item class="md-accent md-hue-2"}}
+      {{github-invite class="flex"}}
+    {{/paper-item}}
   {{/paper-list}}
 </md-content>
