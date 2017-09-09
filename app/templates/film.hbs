@@ -1,4 +1,8 @@
-<h2>{{model.film.title}} ({{model.film.release_date}})</h2>
+{{#page-header}}
+  <h2>
+    {{model.film.title}} ({{model.film.release_date}})
+  </h2>
+{{/page-header}}
 <h4>Director: {{model.film.director}}</h4>
 <h3>Synopsis</h3>
 <p>{{model.film.description}})</p>

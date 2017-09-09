@@ -1,14 +1,12 @@
-{{#paper-toolbar class="md-accent"}}
-  {{#paper-toolbar-tools}}
-    <h2>
-      All films
-    </h2>
-    <span class="flex"></span>
-    {{#paper-button iconButton=true title="Search : TODO"}}
-      {{paper-icon "search"}}
-    {{/paper-button}}
-  {{/paper-toolbar-tools}}
-{{/paper-toolbar}}
+{{#page-header}}
+  <h2>
+    All films
+  </h2>
+  <span class="flex"></span>
+  {{#paper-button iconButton=true title="Search : TODO"}}
+    {{paper-icon "search"}}
+  {{/paper-button}}
+{{/page-header}}
 <md-content class="flex">
   {{#paper-list}}
     {{#each model as |film|}}
