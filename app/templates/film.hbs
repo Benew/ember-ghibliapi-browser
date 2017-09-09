@@ -7,12 +7,21 @@
     <small>Director: {{model.film.director}}</small>
   </div>
 {{/page-header}}
-<md-content class="flex md-padding">
-  <h3>Synopsis</h3>
-  <p>{{model.film.description}})</p>
-  {{#if model.locations}}
-    <h3>Locations</h3>
-    {{#paper-list}}
+<md-content class="flex">
+  {{#paper-list}}
+    {{#paper-item}}
+      <div class="md-list-item-text">
+        <h3>Synopsis</h3>
+        <p>{{model.film.description}}</p>
+      </div>
+    {{/paper-item}}
+    {{#if model.locations}}
+      {{paper-divider}}
+      {{#paper-item}}
+        <div class="md-list-item-text">
+          <h3>Locations</h3>
+        </div>
+      {{/paper-item}}
       {{#each model.locations as |location|}}
         {{#paper-item href=(href-to "location" location.id)}}
           <p>
@@ -20,12 +29,15 @@
           </p>
         {{/paper-item}}
       {{/each}}
-    {{/paper-list}}
-  {{/if}}
+    {{/if}}
 
-  {{#if model.film.people}}
-    <h3>People</h3>
-    {{#paper-list}}
+    {{#if model.film.people}}
+      {{paper-divider}}
+      {{#paper-item}}
+        <div class="md-list-item-text">
+          <h3>People</h3>
+        </div>
+      {{/paper-item}}
       {{#each model.film.people as |person|}}
         {{#paper-item href=(href-to "person" person.id)}}
           <p>
@@ -33,18 +45,22 @@
           </p>
         {{/paper-item}}
       {{/each}}
-    {{/paper-list}}
-  {{else}}
-    <p>
-      <b><i>No characters that we know appear in this film...</i></b><br />
-      <a href="https://github.com/janaipakos/ghibliapi/issues/new?title=More+%22{{model.film.title}}%22+characters&body=" target="_blank">I know better ! <small>(submit an issue on github)</small></a><br />
-      Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
-    </p>
-  {{/if}}
 
-  {{#if model.vehicles}}
-    <h3>Vehicles</h3>
-    {{#paper-list}}
+    {{else}}
+      <p>
+        <b><i>No characters that we know appear in this film...</i></b><br />
+        <a href="https://github.com/janaipakos/ghibliapi/issues/new?title=More+%22{{model.film.title}}%22+characters&body=" target="_blank">I know better ! <small>(submit an issue on github)</small></a><br />
+        Feeling like contributing ? <a href="https://github.com/janaipakos/ghibliapi/blob/master/CONTRIBUTING.md" target="_blank">Here is how !</a>
+      </p>
+    {{/if}}
+
+    {{#if model.vehicles}}
+      {{paper-divider}}
+      {{#paper-item}}
+        <div class="md-list-item-text">
+          <h3>Vehicles</h3>
+        </div>
+      {{/paper-item}}
       {{#each model.vehicles as |vehicle|}}
         {{#paper-item href=(href-to "vehicle" vehicle.id)}}
           <p>
@@ -52,6 +68,7 @@
           </p>
         {{/paper-item}}
       {{/each}}
-    {{/paper-list}}
-  {{/if}}
+
+    {{/if}}
+  {{/paper-list}}
 </md-content>
