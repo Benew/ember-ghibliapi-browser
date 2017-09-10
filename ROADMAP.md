@@ -23,7 +23,7 @@
 
 ## Bonus
 
-- [ ] Sort (locally) the list of movies by release date
+- [x] Sort (locally) the list of movies by release date
 - [ ] Build the list of producers and directors
 - [ ] “Mark as seen”: Save a movie as already seen
 - [ ] Random unseen movie
