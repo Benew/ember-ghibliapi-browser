@@ -7,7 +7,7 @@
     <small>Director: {{model.film.director}}</small>
   </div>
 {{/page-header}}
-<md-content class="flex">
+<md-content class="flex layout-column">
   {{#paper-list}}
     {{#paper-item}}
       <div class="md-list-item-text">
@@ -64,8 +64,8 @@
 
     {{/if}}
     {{paper-divider}}
-    {{#paper-item class="md-accent md-hue-2"}}
-      {{github-invite class="flex"}}
-    {{/paper-item}}
   {{/paper-list}}
+  <!-- spacer -->
+  <div class="flex"></div>
+  {{github-invite class="md-accent md-hue-2"}}
 </md-content>
