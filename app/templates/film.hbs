@@ -1,11 +1,14 @@
 {{#page-header}}
-  <div class="flex layout-column layout-align-center-center layout-gt-xs-row">
-    <h2 class="layout-row layout-align-start-center">
-      {{paper-icon "movie"}}
-      {{model.film.title}} ({{model.film.release_date}})
-    </h2>
-    <span class="flex"></span>
-    <small>Director: {{model.film.director}}</small>
+  <div class="flex layout-row max100">
+    {{paper-icon "movie"}}
+    <div class="flex layout-column layout-align-center-center layout-gt-xs-row">
+      <h2 class="truncate">
+        {{model.film.title}} ({{model.film.release_date}})
+      </h2>
+      <span class="flex"></span>
+      <small class="truncate">Director: {{model.film.director}}</small>
+    </div>
+    {{favorite-button type="film" id=model.film.id}}
   </div>
 {{/page-header}}
 <md-content class="flex layout-column">
