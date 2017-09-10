@@ -13,7 +13,12 @@
 ## UI
 
 - [ ] Global navigation
-- [ ] UI Framework (ember-paper?)
+- [x] UI Framework
+  - [x] All films
+  - [x] Film details
+  - [ ] Person details
+  - [ ] Location details
+  - [ ] Vehicle details
 - [ ] Github `contribute` component
 
 ## Bonus
@@ -23,3 +28,4 @@
 - [ ] “Mark as seen”: Save a movie as already seen
 - [ ] Random unseen movie
 ... and any new, unlisted feature
+- [ ] Search film
