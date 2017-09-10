@@ -16,10 +16,10 @@
 - [x] UI Framework
   - [x] All films
   - [x] Film details
-  - [ ] Person details
-  - [ ] Location details
-  - [ ] Vehicle details
-- [ ] Github `contribute` component
+  - [x] Person details
+  - [x] Location details
+  - [x] Vehicle details
+- [x] Github `contribute` component
 
 ## Bonus
 
