@@ -1,0 +1,64 @@
+{{#page-header}}
+  <div class="flex layout-column layout-align-center-center layout-gt-xs-row">
+    <h2 class="layout-row layout-align-start-center" >
+      {{paper-icon "place"}}
+      <span>{{model.name}}</span>
+    </h2>
+    <span class="flex"></span>
+  </div>
+{{/page-header}}
+
+
+<md-content class="flex layout-column">
+  {{#paper-list}}
+    {{#paper-item}}
+      <div class="md-list-item-text">
+        <h3>Characteristics</h3>
+        <ul>
+          <li>
+            <label>Climate :</label> {{model.climate}}
+          </li>
+          <li>
+            <label>Terrain :</label> {{model.terrain}}
+          </li>
+          <li>
+            <label>Surface water :</label> {{model.surfaceWater}}
+          </li>
+        </ul>
+      </div>
+    {{/paper-item}}
+    {{#if model.films}}
+      {{paper-divider}}
+      {{#paper-item}}
+        <div class="md-list-item-text">
+          <h3>Films</h3>
+        </div>
+      {{/paper-item}}
+      {{#each model.films as |film|}}
+        {{#paper-item href=(href-to "film" film.id)}}
+          <p>
+            {{film.title}}
+          </p>
+        {{/paper-item}}
+      {{/each}}
+    {{/if}}
+    {{#if model.residents}}
+      {{paper-divider}}
+      {{#paper-item}}
+        <div class="md-list-item-text">
+          <h3>Residents</h3>
+        </div>
+      {{/paper-item}}
+      {{#each model.residents as |person|}}
+        {{#paper-item href=(href-to "person" person.id)}}
+          <p>
+            {{person.name}}
+          </p>
+        {{/paper-item}}
+      {{/each}}
+    {{/if}}
+  {{/paper-list}}
+  <!-- spacer -->
+  <div class="flex"></div>
+  {{github-invite class="md-accent md-hue-2"}}
+</md-content>

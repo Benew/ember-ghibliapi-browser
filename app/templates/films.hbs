@@ -1,4 +1,37 @@
-<h2>List of all films</h2>
-{{#each model as |film|}}
-  <h3>{{film.title}}</h3>
-{{/each}}
+{{#page-header}}
+  <h2>
+    All films
+  </h2>
+  <span class="flex"></span>
+  {{#if search}}
+    {{paper-input label="Filter films" class="flex" value=searchTerms onChange=(action (mut searchTerms))}}
+    {{#paper-button onClick=(action "toggleSearch") iconButton=true title="Disable search" }}
+      {{paper-icon "close"}}
+    {{/paper-button}}
+  {{else}}
+    {{#paper-button onClick=(action "toggleSearch") iconButton=true title="Filter films" }}
+      {{paper-icon "search"}}
+    {{/paper-button}}
+  {{/if}}
+{{/page-header}}
+<md-content class="flex layout-column">
+  {{#paper-list}}
+    {{#each filteredModel as |film|}}
+      {{#paper-item class="md-2-line" href=(href-to "film" film.id)}}
+        {{paper-icon "movie"}}
+        <div class="md-list-item-text">
+          <h3>
+            {{film.title}}
+          </h3>
+          <p>
+            {{film.director}}, {{film.release_date}}
+          </p>
+        </div>
+        {{favorite-button type="film" id=film.id}}
+      {{/paper-item}}
+    {{/each}}
+  {{/paper-list}}
+  <!-- spacer -->
+  <div class="flex"></div>
+  {{github-invite class="md-accent md-hue-2"}}
+</md-content>

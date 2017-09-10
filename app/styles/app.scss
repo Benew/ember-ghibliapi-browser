@@ -1,0 +1,15 @@
+// Define desired color palettes.
+$primary: "deep-orange";
+$accent: "blue-grey";
+$warn: "pink";
+@import 'ember-paper';
+
+body > .ember-view{
+  @extend .flex, .layout-column;
+}
+#header, #footer {
+  @extend md-toolbar;
+}
+@import 'color-utils';
+@import 'toolbar';
+@import 'truncate';
