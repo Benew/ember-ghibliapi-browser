@@ -10,6 +10,10 @@
       }
     }
   }
+  &.fix-right-align,
+  .fix-right-align &{
+    padding-right: 0
+  }
   /**
    * Fix label position when floating
    */
