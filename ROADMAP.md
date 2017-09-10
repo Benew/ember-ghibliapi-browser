@@ -28,4 +28,4 @@
 - [ ] “Mark as seen”: Save a movie as already seen
 - [ ] Random unseen movie
 ... and any new, unlisted feature
-- [ ] Search film
+- [x] Search film
