@@ -13,6 +13,7 @@
 ## UI
 
 - [ ] Global navigation
+  - [x] "smart" Back button
 - [x] UI Framework
   - [x] All films
   - [x] Film details
