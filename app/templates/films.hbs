@@ -4,7 +4,7 @@
   </h2>
   <span class="flex"></span>
   {{#if search}}
-    {{paper-input label="Filter films" value=searchTerms onChange=(action (mut searchTerms))}}
+    {{paper-input label="Filter films" class="flex" value=searchTerms onChange=(action (mut searchTerms))}}
     {{#paper-button onClick=(action "toggleSearch") iconButton=true title="Disable search" }}
       {{paper-icon "close"}}
     {{/paper-button}}
