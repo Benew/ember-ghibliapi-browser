@@ -1,0 +1,36 @@
+.md-toolbar-tools{
+  md-input-container{
+    margin: 9px 0;
+    .md-errors-spacer{
+      min-height: 0;
+    }
+    &.md-input-focused{
+      label{
+        display: none
+      }
+    }
+  }
+  /**
+   * Fix label position when floating
+   */
+  md-input-container.md-input-focused label:not(.md-no-float),
+  md-input-container.md-input-has-placeholder label:not(.md-no-float),
+  md-input-container.md-input-has-value label:not(.md-no-float){
+    transform: scale(.5) translate3d(0, 36px, 0);
+  }
+}
+/**
+ * Repeating .md-accent selector will git more weight to the selector
+ * thus override default angular material styles
+ */
+.md-accent.md-accent.md-accent md-input-container,
+md-input-container.md-accent.md-accent.md-accent {
+  .md-input{
+    color: contrastColor($accent,
+      '500');
+  }
+  label{
+    color: transparentize(contrastColor($accent,
+      '500'), .5);
+  }
+}
