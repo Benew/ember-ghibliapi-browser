@@ -1,6 +1,6 @@
 {
   "name": "ember-ghibliapi-browser",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple ember app that shows contents from the ghibliapi hosted on heroku",
   "license": "MIT",
   "author": "",
