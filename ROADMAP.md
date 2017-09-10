@@ -25,7 +25,7 @@
 
 - [x] Sort (locally) the list of movies by release date
 - [ ] Build the list of producers and directors
-- [ ] “Mark as seen”: Save a movie as already seen
+- [x] “Mark as seen”: Save a movie as already seen (favorites)
 - [ ] Random unseen movie
 ... and any new, unlisted feature
 - [x] Search film
