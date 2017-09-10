@@ -1,12 +1,11 @@
 {{#page-header class="fix-right-align"}}
   <div class="flex layout-row max100">
     {{paper-icon "movie"}}
-    <div class="flex layout-column layout-align-center-center layout-gt-xs-row">
+    <div class="flex layout-column layout-align-center-center">
       <h2 class="truncate">
-        {{model.film.title}} ({{model.film.release_date}})
+        {{model.film.title}}
       </h2>
-      <span class="flex"></span>
-      <small class="truncate">Director: {{model.film.director}}</small>
+      <small class="truncate">{{model.film.release_date}}</small>
     </div>
     {{favorite-button type="film" id=model.film.id}}
   </div>
@@ -15,6 +14,12 @@
   {{#paper-list}}
     {{#paper-item}}
       <div class="md-list-item-text">
+        <p class="flex layout-row">
+          <span>Director&nbsp;: <b>{{model.film.director}}</b></span>
+        </p>
+        <p class="flex layout-row">
+          <span>Producer&nbsp;: <b>{{model.film.producer}}</b></span>
+        </p>
         <h3>Synopsis</h3>
         <p>{{model.film.description}}</p>
       </div>
