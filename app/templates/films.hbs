@@ -10,12 +10,15 @@
 <md-content class="flex layout-column">
   {{#paper-list}}
     {{#each model as |film|}}
-      {{#paper-item href=(href-to "film" film.id)}}
-        <p>
-          {{film.title}}
-        </p>
-        <div class="md-secondary-container">
-          {{film.director}}, {{film.release_date}}
+      {{#paper-item href=(href-to "film" film.id) class="md-2-line"}}
+        {{paper-icon "movie"}}
+        <div class="md-list-item-text">
+          <h3>
+            {{film.title}}
+          </h3>
+          <p>
+            {{film.director}}, {{film.release_date}}
+          </p>
         </div>
       {{/paper-item}}
     {{/each}}
