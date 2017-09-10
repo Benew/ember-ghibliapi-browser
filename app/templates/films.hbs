@@ -3,13 +3,20 @@
     All films
   </h2>
   <span class="flex"></span>
-  {{#paper-button iconButton=true title="Search : TODO"}}
-    {{paper-icon "search"}}
-  {{/paper-button}}
+  {{#if search}}
+    {{paper-input label="Filter films" value=searchTerms onChange=(action (mut searchTerms))}}
+    {{#paper-button onClick=(action "toggleSearch") iconButton=true title="Disable search" }}
+      {{paper-icon "close"}}
+    {{/paper-button}}
+  {{else}}
+    {{#paper-button onClick=(action "toggleSearch") iconButton=true title="Search : TODO" }}
+      {{paper-icon "search"}}
+    {{/paper-button}}
+  {{/if}}
 {{/page-header}}
 <md-content class="flex layout-column">
   {{#paper-list}}
-    {{#each model as |film|}}
+    {{#each filteredModel as |film|}}
       {{#paper-item href=(href-to "film" film.id) class="md-2-line"}}
         {{paper-icon "movie"}}
         <div class="md-list-item-text">
