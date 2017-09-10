@@ -17,7 +17,7 @@
 <md-content class="flex layout-column">
   {{#paper-list}}
     {{#each filteredModel as |film|}}
-      {{#paper-item href=(href-to "film" film.id) class="md-2-line"}}
+      {{#paper-item class="md-2-line" href=(href-to "film" film.id)}}
         {{paper-icon "movie"}}
         <div class="md-list-item-text">
           <h3>
@@ -27,6 +27,7 @@
             {{film.director}}, {{film.release_date}}
           </p>
         </div>
+        {{favorite-button type="film" id=film.id}}
       {{/paper-item}}
     {{/each}}
   {{/paper-list}}
